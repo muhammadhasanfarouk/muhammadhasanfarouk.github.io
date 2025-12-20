@@ -1,0 +1,345 @@
+/* =========================
+   Variables & Global Resets
+   ========================= */
+:root {
+  --color-bg-main: #020617;         /* Deep dark background */
+  --color-bg-secondary: #0f172a;    /* Slightly lighter section bg */
+  --color-bg-card: rgba(30, 41, 59, 0.7); /* Transparent card bg */
+  --color-text-primary: #f1f5f9;    /* Main text color */
+  --color-text-secondary: #94a3b8;  /* Muted text color */
+  --color-accent: #3b82f6;          /* Bright Blue */
+  --color-accent-hover: #60a5fa;    /* Lighter Blue */
+  --color-highlight: #facc15;       /* Yellow highlight (for HPC) */
+  
+  --border-radius-lg: 16px;
+  --border-radius-sm: 8px;
+  --transition-standard: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-bg-main);
+  color: var(--color-text-primary);
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-standard);
+}
+
+/* =========================
+   Header & Hero
+   ========================= */
+.hero {
+  /* More complex, modern gradient */
+  background: linear-gradient(135deg, #1e3a8a 0%, #020617 60%, #0f172a 100%);
+  padding: 6rem 1rem 5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.profile-pic {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  /* Add a subtle glow to the profile picture */
+  box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.4);
+  margin-bottom: 1.8rem;
+  transition: var(--transition-standard);
+}
+
+.profile-pic:hover {
+    transform: scale(1.03);
+    border-color: var(--color-accent);
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  /* Subtle gradient text effect */
+  background: linear-gradient(to right, #ffffff, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.75rem;
+  font-weight: 500;
+}
+
+/* =========================
+   Navigation Menu
+   ========================= */
+.menu-separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    margin: 1.5rem auto;
+    width: 50%;
+}
+
+/* Top Buttons (Internal Links) */
+.menu.top {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.menu.top a {
+  padding: 0.7rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.menu.top a:hover {
+  background: rgba(59, 130, 246, 0.2); /* Blue tint on hover */
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.menu.top a.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+/* Bottom Links (External) */
+.menu.bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.menu.bottom a {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+/* Cool underline hover effect for bottom links */
+.menu.bottom a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: var(--transition-standard);
+}
+
+.menu.bottom a:hover {
+    color: var(--color-accent-hover);
+}
+.menu.bottom a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================
+   Main Content Layout
+   ========================= */
+main {
+  max-width: 1000px; /* Slightly wider */
+  margin: auto;
+  padding: 5rem 1.5rem;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Replace the left border with a modern indicator */
+h2::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 2rem;
+    background: var(--color-accent);
+    margin-right: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+p {
+    color: var(--color-text-secondary);
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   Projects Section (Card Grid)
+   ========================= */
+.projects {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  /* Auto-fit grid: roughly 2 columns on medium screens, 1 on mobile */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.projects li {
+  background: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition-standard);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures equal height cards in grid */
+}
+
+.projects li:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.projects li a {
+  color: var(--color-accent-hover);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.projects li p {
+  margin: 0;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Pushes content to fill space */
+}
+
+/* Special styling for the HPC Feature Card */
+.projects li:has(a[href="hpc.html"]) {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(250, 204, 21, 0.05));
+    border-color: rgba(250, 204, 21, 0.2);
+}
+
+.projects li a[href="hpc.html"] {
+  color: var(--color-highlight);
+}
+
+
+/* =========================
+   Volunteering & Cluster Blocks
+   ========================= */
+.volunteer {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* Center vertically */
+  background: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition-standard);
+}
+
+.volunteer:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.volunteer img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  flex-shrink: 0; /* Prevents image squishing on small screens */
+}
+
+.volunteer h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  color: var(--color-text-primary);
+}
+
+.volunteer span {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--color-accent-hover);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  text-align: center;
+  padding: 3rem;
+  background: #01040f; /* Slightly darker than main bg */
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .menu.top {
+      flex-wrap: wrap;
+  }
+
+  .volunteer {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .volunteer img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+}
