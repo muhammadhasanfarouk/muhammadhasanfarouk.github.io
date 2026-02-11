@@ -49,10 +49,39 @@
     </section>
 
     <section>
-      <h2>Research & Industry Experience</h2>
+      <h2>International Recognition</h2>
+      
+      <div class="volunteer">
+        <img src="images/infn_cover.jpg" alt="INFN Scientific Computing School" class="zoomable-img" onclick="openLightbox(this)" />
+
+        <div>
+          <h3>ESC@SESAME Nomination</h3>
+          <span>2025 Achievement</span>
+
+          <p>
+            I was recommended for the prestigious <strong>INFN–SESAME International School on Efficient Scientific Computing</strong>.
+            This nomination acknowledges my potential in scientific computing and my ability to tackle complex
+            computational challenges in an international research environment.
+          </p>
+          
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-secondary);">
+             <strong>Certificate & Proof:</strong>
+          </p>
+
+          <div style="width: 150px; margin-top: 0.5rem;">
+               <img src="images/infn_certificate.jpg" alt="INFN Nomination Certificate" class="zoomable-img" onclick="openLightbox(this)"
+                    style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>HPC Research Lab</h2>
 
       <div class="volunteer">
-        <img src="images/cluster.jpg" alt="HiPer-FC Cluster" />
+        <img src="images/cluster.jpg" alt="HiPer-FC Cluster" class="zoomable-img" onclick="openLightbox(this)"/>
 
         <div>
           <h3>HPC R&D Intern</h3>
@@ -88,13 +117,13 @@
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             
             <div style="flex: 1; min-width: 140px;">
-               <img src="images/group_photo.jpg" alt="HPC Research Team" 
+               <img src="images/group_photo.jpg" alt="HPC Research Team" class="zoomable-img" onclick="openLightbox(this)"
                     style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 16/9;">
                <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.5rem; text-align: center;">Research Team</p>
             </div>
 
             <div style="flex: 1; min-width: 140px;">
-               <img src="images/certificate.jpg" alt="Internship Certificate" 
+               <img src="images/certificate.jpg" alt="Internship Certificate" class="zoomable-img" onclick="openLightbox(this)"
                     style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 16/9;">
                <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.5rem; text-align: center;">Certificate Preview</p>
             </div>
@@ -105,59 +134,29 @@
       </div>
     </section>
 
-    <section>
-      <h2>Engineering Projects</h2>
-      <ul class="projects">
-        
-        <li>
-          <a href="https://github.com/muhammadhasanfarouk/Image-Processing-Engine" target="_blank">
-            C++ Image Processing Engine
-          </a>
-          <p>
-            A high-performance image manipulation tool built from scratch. I avoided external libraries to focus on
-            computational efficiency and memory management.
-          </p>
-          <ul style="margin-top: 1rem; padding-left: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
-             <li style="margin-bottom: 0.3rem;"><strong>Raw Matrix Operations:</strong> Implemented convolution filters (Sobel, Gaussian) using raw 2D arrays.</li>
-             <li><strong>Memory Optimization:</strong> Utilized manual pointer arithmetic to minimize runtime overhead.</li>
-          </ul>
-        </li>
-
-        <li>
-          <span>High-Performance Math Kernel</span>
-          <p>
-            A low-level system designed for computationally intensive tasks, focusing on algorithmic speed and data compression.
-          </p>
-           <ul style="margin-top: 1rem; padding-left: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
-             <li style="margin-bottom: 0.3rem;"><strong>Matrix Exponentiation:</strong> Optimized algorithms for rapid large-number calculations.</li>
-             <li><strong>Compression Pipelines:</strong> Implemented memory-efficient data structures to handle large datasets.</li>
-          </ul>
-        </li>
-
-      </ul>
-    </section>
-
-    <section>
-      <h2>Recognition</h2>
-      <div class="projects">
-        <div
-          style="background: var(--color-bg-card); padding: 2rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
-          <h3 style="margin-top: 0; color: white;">ESC@SESAME Nomination</h3>
-          <p>
-            I was recommended for the prestigious <strong>INFN–SESAME International School on Efficient Scientific
-              Computing</strong>.
-            This nomination acknowledges my potential in scientific computing and my ability to tackle complex
-            computational challenges.
-          </p>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
     <p>© 2025 Muhammad Hasan Farouk</p>
   </footer>
+
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Screen View">
+  </div>
+
+  <script>
+    function openLightbox(element) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = element.src; 
+      lightbox.style.display = 'flex'; 
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
 
 </body>
 

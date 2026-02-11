@@ -2,14 +2,14 @@
    Variables & Global Resets
    ========================= */
 :root {
-  --color-bg-main: #020617;         /* Deep dark background */
-  --color-bg-secondary: #0f172a;    /* Slightly lighter section bg */
-  --color-bg-card: rgba(30, 41, 59, 0.7); /* Transparent card bg */
-  --color-text-primary: #f1f5f9;    /* Main text color */
-  --color-text-secondary: #94a3b8;  /* Muted text color */
-  --color-accent: #3b82f6;          /* Bright Blue */
-  --color-accent-hover: #60a5fa;    /* Lighter Blue */
-  --color-highlight: #facc15;       /* Yellow highlight (for HPC) */
+  --color-bg-main: #020617;
+  --color-bg-secondary: #0f172a;
+  --color-bg-card: rgba(30, 41, 59, 0.7);
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-highlight: #facc15;
   
   --border-radius-lg: 16px;
   --border-radius-sm: 8px;
@@ -39,7 +39,6 @@ a {
    Header & Hero
    ========================= */
 .hero {
-  /* More complex, modern gradient */
   background: linear-gradient(135deg, #1e3a8a 0%, #020617 60%, #0f172a 100%);
   padding: 6rem 1rem 5rem;
   text-align: center;
@@ -57,7 +56,6 @@ a {
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid rgba(255, 255, 255, 0.1);
-  /* Add a subtle glow to the profile picture */
   box-shadow: 0 0 30px -5px rgba(59, 130, 246, 0.4);
   margin-bottom: 1.8rem;
   transition: var(--transition-standard);
@@ -73,7 +71,6 @@ a {
   font-weight: 800;
   margin: 0;
   letter-spacing: -0.02em;
-  /* Subtle gradient text effect */
   background: linear-gradient(to right, #ffffff, #93c5fd);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -97,7 +94,6 @@ a {
     width: 50%;
 }
 
-/* Top Buttons (Internal Links) */
 .menu.top {
   display: flex;
   justify-content: center;
@@ -116,7 +112,7 @@ a {
 }
 
 .menu.top a:hover {
-  background: rgba(59, 130, 246, 0.2); /* Blue tint on hover */
+  background: rgba(59, 130, 246, 0.2);
   border-color: var(--color-accent);
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
@@ -128,7 +124,6 @@ a {
   color: white;
 }
 
-/* Bottom Links (External) */
 .menu.bottom {
   display: flex;
   justify-content: center;
@@ -146,7 +141,6 @@ a {
   position: relative;
 }
 
-/* Cool underline hover effect for bottom links */
 .menu.bottom a::after {
     content: '';
     position: absolute;
@@ -170,7 +164,7 @@ a {
    Main Content Layout
    ========================= */
 main {
-  max-width: 1000px; /* Slightly wider */
+  max-width: 1000px;
   margin: auto;
   padding: 5rem 1.5rem;
 }
@@ -188,7 +182,6 @@ h2 {
   align-items: center;
 }
 
-/* Replace the left border with a modern indicator */
 h2::before {
     content: "";
     display: inline-block;
@@ -213,12 +206,12 @@ p {
   list-style: none;
   padding: 0;
   display: grid;
-  /* Auto-fit grid: roughly 2 columns on medium screens, 1 on mobile */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-.projects li {
+/* FIX: Use > selector to only target the main card, not inner lists */
+.projects > li {
   background: var(--color-bg-card);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 2rem;
@@ -226,17 +219,17 @@ p {
   transition: var(--transition-standard);
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensures equal height cards in grid */
+  height: 100%;
 }
 
-.projects li:hover {
+.projects > li:hover {
   transform: translateY(-5px);
   background: rgba(30, 41, 59, 0.9);
   border-color: rgba(59, 130, 246, 0.3);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-.projects li a {
+.projects > li a {
   color: var(--color-accent-hover);
   font-size: 1.3rem;
   font-weight: 700;
@@ -244,19 +237,19 @@ p {
   display: inline-block;
 }
 
-.projects li p {
+.projects > li p {
   margin: 0;
   font-size: 0.95rem;
-  flex-grow: 1; /* Pushes content to fill space */
+  flex-grow: 1;
 }
 
-/* Special styling for the HPC Feature Card */
-.projects li:has(a[href="hpc.html"]) {
+/* HPC Feature Card Styling */
+.projects > li:has(a[href="hpc.html"]) {
     background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(250, 204, 21, 0.05));
     border-color: rgba(250, 204, 21, 0.2);
 }
 
-.projects li a[href="hpc.html"] {
+.projects > li a[href="hpc.html"] {
   color: var(--color-highlight);
 }
 
@@ -267,7 +260,7 @@ p {
 .volunteer {
   display: flex;
   gap: 2rem;
-  align-items: center; /* Center vertically */
+  align-items: center;
   background: var(--color-bg-card);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 2rem;
@@ -286,7 +279,7 @@ p {
   object-fit: cover;
   border-radius: var(--border-radius-sm);
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  flex-shrink: 0; /* Prevents image squishing on small screens */
+  flex-shrink: 0;
 }
 
 .volunteer h3 {
@@ -306,40 +299,66 @@ p {
   border-radius: 999px;
 }
 
-
 /* =========================
    Footer
    ========================= */
 footer {
   text-align: center;
   padding: 3rem;
-  background: #01040f; /* Slightly darker than main bg */
+  background: #01040f;
   color: var(--color-text-secondary);
   font-size: 0.9rem;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 /* =========================
-   Responsive Adjustments
+   Lightbox (Image Zoom)
    ========================= */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  
-  .menu.top {
-      flex-wrap: wrap;
-  }
+.zoomable-img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.zoomable-img:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent) !important;
+}
 
-  .volunteer {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .volunteer img {
+/* The overlay background */
+#lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: auto;
-    max-height: 250px;
-  }
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+/* The Image inside overlay */
+#lightbox-img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .menu.top { flex-wrap: wrap; }
+  .volunteer { flex-direction: column; align-items: flex-start; text-align: left; }
+  .volunteer img { width: 100%; height: auto; max-height: 250px; }
 }
