@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HPC Engineering – Muhammad Hasan Farouk</title>
+  <title>Scientific Computing & HPC – Muhammad Hasan Farouk</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -15,12 +15,12 @@
 
   <header class="hero">
     <div class="hero-content">
-      <h1>High Performance Computing</h1>
-      <p>Cluster Administration • Parallel Computing • Linux Internals</p>
+      <h1>Scientific Computing & HPC</h1>
+      <p>Parallel Algorithms • Cluster Architecture • Low-Level Optimization</p>
 
       <div class="menu top">
         <a href="index.html">Home</a>
-        <a href="hpc.html" class="active">HPC Projects</a>
+        <a href="hpc.html" class="active">Scientific Computing</a>
       </div>
 
       <hr class="menu-separator">
@@ -39,14 +39,12 @@
     <section>
       <h2>Academic Focus</h2>
       <p>
-        My specialization in HPC is built on a rigorous academic foundation in <strong>Computer Architecture</strong>
-        and <strong>Parallel Programming</strong>.
+        My specialization is built on a rigorous academic foundation in <strong>Computer Architecture</strong>
+        and <strong>Scientific Computing</strong>.
         I have consistently achieved top-tier grades (A+) in related coursework at Cairo University, driving my passion
         for the scalable architecture of <strong>High-Performance Computing (HPC) systems</strong>.
-        My technical focus centers on <strong>Parallel Computing</strong>, <strong>Multithreading</strong>, and
+        My technical focus centers on <strong>Parallel Programming</strong>, <strong>Multithreading</strong>, and
         <strong>Cluster Administration</strong>.
-        I apply these concepts to build low-level systems, such as a <strong>High-Performance Math Kernel</strong>
-        utilizing matrix exponentiation and memory-efficient data compression pipelines.
       </p>
     </section>
 
@@ -83,11 +81,60 @@
           </ul>
 
           <a href="files/intern.pdf" target="_blank"
-            style="color: var(--color-accent); font-weight: 600; font-size: 0.95rem; text-decoration: underline;">
-            View Official Certificate →
+            style="color: var(--color-accent); font-weight: 600; font-size: 0.95rem; text-decoration: underline; display: inline-block; margin-bottom: 1.5rem;">
+            View Official Certificate (PDF) →
           </a>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            
+            <div style="flex: 1; min-width: 140px;">
+               <img src="images/group_photo.jpg" alt="HPC Research Team" 
+                    style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 16/9;">
+               <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.5rem; text-align: center;">Research Team</p>
+            </div>
+
+            <div style="flex: 1; min-width: 140px;">
+               <img src="images/certificate.jpg" alt="Internship Certificate" 
+                    style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 16/9;">
+               <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.5rem; text-align: center;">Certificate Preview</p>
+            </div>
+
+          </div>
+
         </div>
       </div>
+    </section>
+
+    <section>
+      <h2>Engineering Projects</h2>
+      <ul class="projects">
+        
+        <li>
+          <a href="https://github.com/muhammadhasanfarouk/Image-Processing-Engine" target="_blank">
+            C++ Image Processing Engine
+          </a>
+          <p>
+            A high-performance image manipulation tool built from scratch. I avoided external libraries to focus on
+            computational efficiency and memory management.
+          </p>
+          <ul style="margin-top: 1rem; padding-left: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+             <li style="margin-bottom: 0.3rem;"><strong>Raw Matrix Operations:</strong> Implemented convolution filters (Sobel, Gaussian) using raw 2D arrays.</li>
+             <li><strong>Memory Optimization:</strong> Utilized manual pointer arithmetic to minimize runtime overhead.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span>High-Performance Math Kernel</span>
+          <p>
+            A low-level system designed for computationally intensive tasks, focusing on algorithmic speed and data compression.
+          </p>
+           <ul style="margin-top: 1rem; padding-left: 1rem; color: var(--color-text-secondary); font-size: 0.9rem;">
+             <li style="margin-bottom: 0.3rem;"><strong>Matrix Exponentiation:</strong> Optimized algorithms for rapid large-number calculations.</li>
+             <li><strong>Compression Pipelines:</strong> Implemented memory-efficient data structures to handle large datasets.</li>
+          </ul>
+        </li>
+
+      </ul>
     </section>
 
     <section>
