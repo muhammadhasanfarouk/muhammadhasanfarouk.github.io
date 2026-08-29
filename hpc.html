@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scientific Computing & HPC – Muhammad Hasan Farouk</title>
+  <title>Scientific Computing & HPC &ndash; Muhammad Hasan Farouk</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -13,115 +13,120 @@
 
 <body>
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Scientific Computing & HPC</h1>
-      <p>Parallel Algorithms • Cluster Architecture • Low-Level Optimization</p>
-
-      <div class="menu top">
-        <a href="index.html">Home</a>
-        <a href="hpc.html" class="active">Scientific Computing</a>
+  <header class="hdr">
+    <div class="hdr-in">
+      <div class="logo">
+        <span>MHF.</span>
       </div>
-
-      <hr class="menu-separator">
-
-      <div class="menu bottom">
-        <a href="https://github.com/muhammadhasanfarouk" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/muhammad-hasan-647370326" target="_blank">LinkedIn</a>
-        <a href="mailto:muhammadhasanfarouk@gmail.com">Email</a>
-        <a href="files/resume.pdf" target="_blank">Resume</a>
+      <nav class="hdr-nav">
+        <a href="index.html" class="hdr-link">Home</a>
+        <a href="hpc.html" class="hdr-link active">Scientific Computing</a>
+      </nav>
+      <div class="hdr-right">
+        <a href="https://github.com/muhammadhasanfarouk" target="_blank" class="ver"><span
+            class="ver-dot"></span>GitHub</a>
+        <a href="https://www.linkedin.com/in/muhammad-hasan-647370326" target="_blank" class="ver"><span
+            class="ver-dot"></span>LinkedIn</a>
       </div>
     </div>
   </header>
 
-  <main>
+  <section class="hero" style="min-height: auto; padding-top: calc(60px + var(--s6)); padding-bottom: var(--s4);">
+    <div class="hero-halo"></div>
+    <div class="hero-in" style="max-width: 800px;">
+      <h1 class="hero-id" style="font-size: clamp(2.5rem, 5vw, 4rem);">Scientific Computing &amp; HPC</h1>
+      <p class="hero-handle mono">Parallel Algorithms &bull; Cluster Architecture &bull; Low-Level Optimization</p>
 
-    <section>
-      <h2>Academic Focus</h2>
-      <p>
-        My specialization is built on a rigorous academic foundation in <strong>Computer Architecture</strong>
-        and <strong>Scientific Computing</strong>.
-        I have consistently achieved top-tier grades (A+) in related coursework at Cairo University, driving my passion
-        for the scalable architecture of <strong>High-Performance Computing (HPC) systems</strong>.
-        My technical focus centers on <strong>Parallel Programming</strong>, <strong>Multithreading</strong>, and
-        <strong>Cluster Administration</strong>.
-      </p>
-    </section>
+      <div class="what-lede" style="margin-top: 2rem;">
+        <p>My specialization is built on a rigorous academic foundation in <strong>Computer Architecture</strong> and
+          <strong>Scientific Computing</strong>. I have consistently achieved top-tier grades (A+) in related coursework
+          at Cairo University, driving my passion for the scalable architecture of <strong>High-Performance Computing
+            (HPC) systems</strong>. My technical focus centers on <strong>Parallel Programming</strong>,
+          <strong>Multithreading</strong>, and <strong>Cluster Administration</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>INFN-SESAME Scientific Computing School (ESC@SESAME)</h2>
-      
-      <div class="volunteer">
-        <img src="images/infn_school.png" alt="ESC@SESAME School" class="zoomable-img" onclick="openLightbox(this)" />
-
-        <div>
-          <h3>International School on Efficient Scientific Computing</h3>
-          <span>2025 Achievement</span>
-
-          <p>
-            Selected for the prestigious INFN–SESAME International School. This intensive program focuses on modern HPC architectures, parallel programming paradigms, and performance optimization for complex scientific workloads in an international research environment.
-          </p>
-          
-          <a href="files/Muhammad Hasan INFN - SESAME.pdf" target="_blank"
-            style="color: var(--color-accent); font-weight: 600; font-size: 0.95rem; text-decoration: underline; display: inline-block; margin-top: 0.5rem; margin-bottom: 1.5rem;">
-            View Official Nomination Document (PDF) →
-          </a>
-
-          <div style="margin-top: 0.5rem;">
-              <img src="images/group_photo.jpg" alt="INFN Professors & Cohort" class="zoomable-img" onclick="openLightbox(this)"
-                   style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 16/9;">
-              <p style="font-size: 0.85rem; color: var(--color-text-secondary); margin-top: 0.5rem;">INFN Professors & Cohort</p>
-           </div>
-
+  <section class="phil scroll-animate">
+    <div class="panel">
+      <div>
+        <span class="panel-num">2025 Achievement</span>
+        <h2 class="panel-h" style="font-size: clamp(1.8rem, 2vw, 2.5rem);">International School on Efficient Scientific
+          Computing</h2>
+        <div class="panel-lede">
+          <p>Selected for the prestigious INFN&ndash;SESAME International School. This intensive program focuses on
+            modern HPC architectures, parallel programming paradigms, and performance optimization for complex
+            scientific workloads in an international research environment.</p>
+          <a href="files/Muhammad Hasan INFN - SESAME.pdf" target="_blank" class="tag"
+            style="margin-top: 1rem; color: var(--ink);">View Official Nomination (PDF)</a>
         </div>
       </div>
-    </section>
+      <div>
+        <img src="images/infn_school.png" alt="ESC@SESAME School" class="panel-art zoomable-img"
+          onclick="openLightbox(this)" />
+        <div style="margin-top: 1rem;">
+          <img src="images/group_photo.jpg" alt="INFN Professors & Cohort" class="panel-art zoomable-img"
+            onclick="openLightbox(this)" style="aspect-ratio: 16/9; max-height: 250px;">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>HPC Research Lab Internship</h2>
-
-      <div class="volunteer">
-        <img src="images/cluster.jpg" alt="HiPer-FC Cluster" class="zoomable-img" onclick="openLightbox(this)"/>
-
-        <div>
-          <h3>HPC R&D Intern</h3>
-          <span>July 2025 – Sept 2025</span>
-
-          <p>
-            <strong>Faculty of Computers & AI, Cairo University (FCAI-CU)</strong><br>
-            Worked within the HPC Research Lab under <strong>Dr. Ahmed Shawky Moussa</strong>.
-            Focus: Infrastructure modernization, system stability, and research workload optimization.
-          </p>
-
-          <ul
-            style="margin-top: 0.8rem; margin-bottom: 1rem; padding-left: 1.2rem; color: var(--color-text-secondary);">
-            <li style="margin-bottom: 0.5rem;">
-              <strong>HiPer-FC Cluster Rebuild:</strong> Co-led the rebuild and optimization of the HiPer-FC HPC
-              cluster, restoring operational stability for research workloads.
-            </li>
-            <li style="margin-bottom: 0.5rem;">
-              <strong>Infrastructure Deployment:</strong> Designed and deployed a secure multi-node lab environment
-              using SSH-based access control.
-            </li>
-            <li>
-              <strong>System Optimization:</strong> Analyzed system performance bottlenecks and applied
-              hardware/software tuning to improve efficiency for compute-intensive tasks.
-            </li>
+  <section class="phil scroll-animate">
+    <div class="panel" style="grid-template-columns: 1.05fr 1fr;">
+      <img src="images/cluster.jpg" alt="HiPer-FC Cluster" class="panel-art zoomable-img" onclick="openLightbox(this)"
+        style="order: -1;" />
+      <div>
+        <span class="panel-num">July 2025 &ndash; Sept 2025</span>
+        <h2 class="panel-h" style="font-size: clamp(1.8rem, 2vw, 2.5rem);">HPC R&amp;D Intern</h2>
+        <div class="panel-lede">
+          <p><strong>Faculty of Computers &amp; AI, Cairo University (FCAI-CU)</strong><br>
+            Worked within the HPC Research Lab under Dr. Ahmed Shawky Moussa. Focus: Infrastructure modernization,
+            system stability, and research workload optimization.</p>
+          <ul style="padding-left: 1rem; color: var(--ink-muted); font-size: 0.95rem;">
+            <li><strong>HiPer-FC Cluster Rebuild:</strong> Co-led the rebuild and optimization of the HiPer-FC HPC
+              cluster, restoring operational stability for research workloads.</li>
+            <li><strong>Infrastructure Deployment:</strong> Designed and deployed a secure multi-node lab environment
+              using SSH-based access control.</li>
+            <li><strong>System Optimization:</strong> Analyzed system performance bottlenecks and applied
+              hardware/software tuning to improve efficiency for compute-intensive tasks.</li>
           </ul>
-
-          <a href="files/intern.pdf" target="_blank"
-            style="color: var(--color-accent); font-weight: 600; font-size: 0.95rem; text-decoration: underline;">
-            View Official Internship Certificate (PDF) →
-          </a>
-
+          <a href="files/intern.pdf" target="_blank" class="tag" style="margin-top: 1rem; color: var(--ink);">View
+            Internship Certificate (PDF)</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
-
-  <footer>
-    <p>© 2025 Muhammad Hasan Farouk</p>
+  <footer class="ftr">
+    <div class="ftr-top">
+      <div>
+        <p class="ftr-tag">Backend Engineer &bull; HPC Specialist</p>
+      </div>
+      <div class="ftr-cols">
+        <div class="ftr-col">
+          <p class="ftr-head">Navigation</p>
+          <ul>
+            <li><a href="index.html" class="ftr-link">Home</a></li>
+            <li><a href="hpc.html" class="ftr-link">Scientific Computing</a></li>
+            <li><a href="files/resume.pdf" class="ftr-link" target="_blank">Resume</a></li>
+          </ul>
+        </div>
+        <div class="ftr-col">
+          <p class="ftr-head">Socials</p>
+          <ul>
+            <li><a href="https://github.com/muhammadhasanfarouk" target="_blank" class="ftr-link">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-hasan-647370326" target="_blank"
+                class="ftr-link">LinkedIn</a></li>
+            <li><a href="mailto:muhammadhasanfarouk@gmail.com" class="ftr-link">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <p class="mono">&copy; 2025 Muhammad Hasan Farouk</p>
+    </div>
   </footer>
 
   <div id="lightbox" onclick="closeLightbox()">
@@ -132,14 +137,26 @@
     function openLightbox(element) {
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-      
-      lightboxImg.src = element.src; 
-      lightbox.style.display = 'flex'; 
+
+      lightboxImg.src = element.src;
+      lightbox.style.display = 'flex';
     }
 
     function closeLightbox() {
       document.getElementById('lightbox').style.display = 'none';
     }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-animate').forEach((el) => {
+      observer.observe(el);
+    });
   </script>
 
 </body>

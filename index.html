@@ -13,128 +13,160 @@
 
 <body>
 
-  <header class="hero">
-    <div class="hero-content">
-      <img src="images/profile.jpg" alt="Muhammad Hasan Farouk" class="profile-pic" />
-
-      <h1>Muhammad Hasan Farouk</h1>
-      <p>Backend Engineer • HPC Specialist • Systems Architect</p>
-
-      <div class="menu top">
-        <a href="index.html" class="active">Home</a>
-        <a href="hpc.html">Scientific Computing</a>
+  <header class="hdr">
+    <div class="hdr-in">
+      <div class="logo">
+        <span>MHF.</span>
       </div>
-
-      <hr class="menu-separator">
-
-      <div class="menu bottom">
-        <a href="https://github.com/muhammadhasanfarouk" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/muhammad-hasan-647370326" target="_blank">LinkedIn</a>
-        <a href="mailto:muhammadhasanfarouk@gmail.com">Email</a>
-        <a href="files/resume.pdf" target="_blank">Resume</a>
+      <nav class="hdr-nav">
+        <a href="index.html" class="hdr-link active">Home</a>
+        <a href="hpc.html" class="hdr-link">Scientific Computing</a>
+      </nav>
+      <div class="hdr-right">
+        <a href="https://github.com/muhammadhasanfarouk" target="_blank" class="ver"><span
+            class="ver-dot"></span>GitHub</a>
+        <a href="https://www.linkedin.com/in/muhammad-hasan-647370326" target="_blank" class="ver"><span
+            class="ver-dot"></span>LinkedIn</a>
       </div>
     </div>
   </header>
 
-  <main>
+  <section class="hero">
+    <div class="hero-halo"></div>
+    <div class="hero-art">
+      <img src="images/profile.jpg" alt="Muhammad Hasan Farouk" class="art-gray" />
+      <img src="images/profile.jpg" alt="Muhammad Hasan Farouk" class="art-color" />
+    </div>
+    <div class="hero-in">
+      <h1 class="hero-id">Muhammad<br>Hasan<br>Farouk</h1>
+      <p class="hero-handle mono">Backend Engineer &bull; HPC Specialist &bull; Systems Architect</p>
 
-    <section>
-      <h2>Professional Profile</h2>
-      <p>
-        Final-year Computer Science undergraduate at Cairo University specializing in <strong>Backend
-          Engineering</strong> and <strong>Scientific Computing</strong>.
-        I bridge the gap between scalable web infrastructure and low-level system optimization. My expertise lies in
-        building reliable, high-throughput software and orchestrating distributed systems using tools like Docker,
-        Kubernetes, and Spring Boot.
-      </p>
-    </section>
+      <div class="hero-cta">
+        <a href="mailto:muhammadhasanfarouk@gmail.com" class="btn v-solid">Email Me</a>
+        <a href="files/resume.pdf" target="_blank" class="btn v-outline">Resume</a>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Technical Projects</h2>
-      <ul class="projects">
+  <section class="what scroll-animate">
+    <div class="what-body">
+      <h2 class="what-stmt">Bridging the gap between scalable web infrastructure and low-level system optimization.</h2>
+      <div class="what-lede">
+        <p>Final-year Computer Science undergraduate at Cairo University specializing in <strong>Backend
+            Engineering</strong> and <strong>Scientific Computing</strong>.</p>
+        <p>My expertise lies in building reliable, high-throughput software and orchestrating distributed systems using
+          tools like Docker, Kubernetes, and Spring Boot.</p>
+      </div>
+    </div>
+  </section>
 
-        <li class="featured-project">
-          <h3>Yaqazah - Driver Monitoring System</h3>
-          <span class="badge highlight-badge">Graduation Project</span>
-          <p>
-            Architected the backend infrastructure and deployment for a real-time driver drowsiness prediction system. Designed a robust layered architecture encompassing Session, User, Analytics, and Alert services. Engineered a scalable RESTful API using <strong>Spring Boot</strong>, <strong>PostgreSQL</strong>, and <strong>Redis</strong> for high-speed caching. Managed deployment workflows with <strong>Docker</strong> and built comprehensive data reporting pipelines. Implemented secure role-based access control (RBAC) with Spring Security and stateless JWT authentication.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/YAQAZA/Yaqazah" target="_blank" class="btn primary-btn">View Repository</a>
-          </div>
-        </li>
+  <section class="extras scroll-animate">
+    <p class="extras-lede">Technical Projects</p>
 
-        <li>
-          <h3>LMS API Infrastructure</h3>
-          <p>
-            Engineered a scalable RESTful API using <strong>Spring Boot</strong> and PostgreSQL. Implemented stateless
-            <strong>JWT authentication</strong> and an application-level caching strategy (Spring @Cacheable) to
-            significantly reduce database load and API latency.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/muhammadhasanfarouk/Learning-Management-System" target="_blank" class="btn secondary-btn">View Repository</a>
-          </div>
-        </li>
+    <div class="grid">
+      <article class="card scroll-animate">
+        <div class="card__head">
+          <span class="card__idx">01</span>
+          <h3 class="card__title">Yaqazah - Driver Monitoring</h3>
+          <span class="tag highlight">Graduation Project</span>
+        </div>
+        <p class="card__lede">Architected backend for real-time driver drowsiness prediction. Scalable RESTful API using
+          Spring Boot, PostgreSQL, and Redis.</p>
+        <div class="hero-cta" style="margin-top: auto;">
+          <a href="https://github.com/YAQAZA/Yaqazah" target="_blank" class="btn v-outline">View Repository</a>
+        </div>
+      </article>
 
-        <li>
-          <h3>C++ Image Processing Engine</h3>
-          <p>
-            Built a high-performance image manipulation tool from scratch. Utilized <strong>raw matrix
-              operations</strong> and <strong>manual memory management</strong> to prevent leaks and minimize runtime
-            overhead, avoiding reliance on external libraries.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/muhammadhasanfarouk/Image-Processing-Engine" target="_blank" class="btn secondary-btn">View Repository</a>
-          </div>
-        </li>
+      <article class="card scroll-animate">
+        <div class="card__head">
+          <span class="card__idx">02</span>
+          <h3 class="card__title">LMS API Infrastructure</h3>
+          <span class="tag">Spring Boot</span>
+        </div>
+        <p class="card__lede">Engineered a scalable REST API. Implemented stateless JWT auth and @Cacheable strategy to
+          reduce DB load.</p>
+        <div class="hero-cta" style="margin-top: auto;">
+          <a href="https://github.com/muhammadhasanfarouk/Learning-Management-System" target="_blank"
+            class="btn v-outline">View Repository</a>
+        </div>
+      </article>
 
-        <li>
-          <h3>Restaurant Management System</h3>
-          <p>
-            Desktop solution architected with <strong>C#</strong> and <strong>Entity Framework Core</strong>. Designed a
-            clean, layered architecture to strictly separate application logic from data access concerns, ensuring
-            maintainability.
-          </p>
-          <div class="project-links">
-            <a href="https://github.com/muhammadhasanfarouk/Restaurant-Management-System" target="_blank" class="btn secondary-btn">View Repository</a>
-          </div>
-        </li>
 
-        <li class="hpc-card">
-          <h3>Scientific Computing & HPC</h3>
-          <p>
-             <strong>See my Scientific Computing achievements.</strong> Explore my nomination for the INFN International School and my R&D work optimizing the HiPer-FC Cluster.
-          </p>
-          <div class="project-links">
-            <a href="hpc.html" class="btn highlight-btn">Explore HPC Profile →</a>
-          </div>
-        </li>
 
-      </ul>
-    </section>
+      <article class="card scroll-animate">
+        <div class="card__head">
+          <span class="card__idx">05</span>
+          <h3 class="card__title">Scientific Computing</h3>
+          <span class="tag highlight">Specialization</span>
+        </div>
+        <p class="card__lede">Explore my nomination for the INFN International School and my R&D work optimizing the
+          HiPer-FC Cluster.</p>
+        <div class="hero-cta" style="margin-top: auto;">
+          <a href="hpc.html" class="btn v-solid">Explore HPC Profile &rarr;</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
-    <section>
-      <h2>Volunteering</h2>
-
-      <div class="volunteer">
-        <img src="images/volunteer.jpeg" alt="Egyptian Red Crescent Volunteering" />
-
-        <div>
-          <h3>Volunteer Staff — Egyptian Red Crescent</h3>
-          <span>Sep 2022 – Jan 2023</span>
-          <p>
-            Supported Egypt’s nationwide COVID-19 vaccination campaign. Assisted medical teams and managed patient flow
-            for thousands of individuals, developing strong crisis management and communication skills.
-          </p>
+  <section class="phil scroll-animate">
+    <div class="panel">
+      <div>
+        <span class="panel-num">Volunteering</span>
+        <h2 class="panel-h">Egyptian Red Crescent</h2>
+        <div class="panel-lede">
+          <p>Supported Egypt’s nationwide COVID-19 vaccination campaign. Assisted medical teams and managed patient flow
+            for thousands of individuals, developing strong crisis management and communication skills.</p>
+          <p class="mono" style="font-size: 0.8rem; color: var(--ink-faint); margin-top: 1rem;">Sep 2022 &ndash; Jan
+            2023</p>
         </div>
       </div>
-    </section>
+      <img src="images/volunteer.jpeg" alt="Egyptian Red Crescent Volunteering" class="panel-art" />
+    </div>
+  </section>
 
-  </main>
-
-  <footer>
-    <p>© 2025 Muhammad Hasan Farouk</p>
+  <footer class="ftr">
+    <div class="ftr-top">
+      <div>
+        <p class="ftr-tag">Backend Engineer &bull; HPC Specialist</p>
+      </div>
+      <div class="ftr-cols">
+        <div class="ftr-col">
+          <p class="ftr-head">Navigation</p>
+          <ul>
+            <li><a href="index.html" class="ftr-link">Home</a></li>
+            <li><a href="hpc.html" class="ftr-link">Scientific Computing</a></li>
+            <li><a href="files/resume.pdf" class="ftr-link" target="_blank">Resume</a></li>
+          </ul>
+        </div>
+        <div class="ftr-col">
+          <p class="ftr-head">Socials</p>
+          <ul>
+            <li><a href="https://github.com/muhammadhasanfarouk" target="_blank" class="ftr-link">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-hasan-647370326" target="_blank"
+                class="ftr-link">LinkedIn</a></li>
+            <li><a href="mailto:muhammadhasanfarouk@gmail.com" class="ftr-link">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ftr-bottom">
+      <p class="mono">&copy; 2025 Muhammad Hasan Farouk</p>
+    </div>
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-animate').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 
