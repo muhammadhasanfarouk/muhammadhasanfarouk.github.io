@@ -120,7 +120,7 @@
             2023</p>
         </div>
       </div>
-      <img src="images/volunteer.jpeg" alt="Egyptian Red Crescent Volunteering" class="panel-art" />
+      <img src="images/volunteer.jpeg" alt="Egyptian Red Crescent Volunteering" class="panel-art zoomable-img" onclick="openLightbox(this)" />
     </div>
   </section>
 
@@ -154,7 +154,23 @@
     </div>
   </footer>
 
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Screen View">
+  </div>
+
   <script>
+    function openLightbox(element) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      lightboxImg.src = element.src; 
+      lightbox.style.display = 'flex'; 
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
